@@ -3,10 +3,16 @@ prompt_path() {
 }
 
 git_prompt() {
-    if [ "$(git rev-parse --show-toplevel 2> /dev/null)" != $HOME ]
+    if [ "$(git rev-parse --show-toplevel 2> /dev/null)" = $HOME ]
     then
-        echo "$(git_prompt_info) "
+        exit 0
     fi
+    if [ "$(git rev-parse --show-toplevel 2> /dev/null)" = "/mnt/c/Users/sigur" ]
+    then
+        exit 0
+    fi
+
+    echo "$(git_prompt_info) "
 }
 
 prompt_symbol() {
