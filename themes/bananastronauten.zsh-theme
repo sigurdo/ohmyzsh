@@ -3,11 +3,11 @@ prompt_path() {
 }
 
 git_prompt() {
-    if [ "$(git rev-parse --show-toplevel 2> /dev/null)" = $HOME ]
+    if [[ $(pwd -P) == "/mnt/"* ]]
     then
         exit 0
     fi
-    if [ "$(git rev-parse --show-toplevel 2> /dev/null)" = "/mnt/c/Users/sigur" ]
+    if [ "$(git rev-parse --show-toplevel 2> /dev/null)" = $HOME ]
     then
         exit 0
     fi
