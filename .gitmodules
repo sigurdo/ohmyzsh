@@ -4,3 +4,6 @@
 [submodule "plugins/zsh-syntax-highlighting"]
 	path = custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "custom/plugins/skim-zsh"]
+	path = custom/plugins/skim-zsh
+	url = https://github.com/hackerchai/skim-zsh.git
