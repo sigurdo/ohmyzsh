@@ -27,7 +27,7 @@ git_prompt() {
 prompt_symbol() {
     color="%(?:$fg_bold[green]:$fg_bold[red])"
     symbol="%(!:#:>)"
-    echo "%{$color%}$symbol%{$reset_color%} "
+    echo "%{$color%}$symbol%{$reset_color%} \e[0 q"
 }
 
 PROMPT='$(prompt_path)$(git_prompt)$(prompt_symbol)'
