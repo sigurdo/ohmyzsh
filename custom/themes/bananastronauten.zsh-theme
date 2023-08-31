@@ -2,10 +2,10 @@ rgb_color() {
     r=$1
     g=$2
     b=$3
-    echo "[38;2;$r;$g;${b}m"
+    echo "\e[38;2;$r;$g;${b}m"
 }
 
-bold_on="[1m"
+bold_on="\e[1m"
 
 prompt_path() {
     echo "%{$fg_bold[yellow]%}$(shrink_path -f)%{$reset_color%} "
@@ -36,4 +36,4 @@ ZSH_THEME_GIT_PROMPT_PREFIX="(%{$fg_bold[cyan]%}"
 # ZSH_THEME_GIT_PROMPT_PREFIX="(%{$(rgb_color 92 197 197)%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%})"
 # ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg_bold[red]%}🎉"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{[93m%}🤔"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{\e[38;5;11m%}🤔"
